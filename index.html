@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goh Kim Hua CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 1s ease-in;
+            color: #00796b;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #004d40;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #00796b;
+        }
+
+        .profile, .education, .experience {
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill {
+            margin-bottom: 1rem;
+        }
+
+        .skill p {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #004d40;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            background: #26a69a;
+            height: 100%;
+            transition: width 1s ease-in-out;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-card {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card h3 {
+            color: #00796b;
+        }
+
+        .interactive {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            background: #26a69a;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #4db6ac;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #fff;
+            color: #333;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 600px;
+            position: relative;
+            animation: popUp 0.3s ease;
+        }
+
+        .modal-content h2 {
+            color: #00796b;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Goh Kim Hua</h1>
+        <p>Web Developer | PHP & Laravel Expert | Creative Coder</p>
+    </header>
+
+    <div class="container">
+        <div class="section profile">
+            <h2>About Me</h2>
+            <p>I'm a passionate web developer with expertise in PHP, Laravel, JavaScript, and modern web technologies. I specialize in building interactive, secure, and user-friendly applications, with a knack for applying design patterns and creative UI/UX solutions.</p>
+        </div>
+
+        <div class="section skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <p>PHP & Laravel</p>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>HTML & CSS</p>
+                    <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>XML/XSLT/XPath</p>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>MySQL</p>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Design Patterns</p>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section experience">
+            <h2>Experience</h2>
+            <p><strong>Web Developer Intern</strong> - Tech Solutions (2024)<br>
+               Developed a facility booking system using PHP, Laravel, and MySQL, implementing secure user management and XML-based data presentation.</p>
+            <p><strong>Freelance Developer</strong> (2023-2024)<br>
+               Built responsive web applications with interactive features, utilizing JavaScript and modern CSS frameworks.</p>
+        </div>
+
+        <div class="section education">
+            <h2>Education</h2>
+            <p><strong>BSc in Computer Science</strong> - University of Tech (2021-2025)<br>
+               Focused on web development, database systems, and software engineering.</p>
+        </div>
+
+        <div class="section projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="showModal('FastBook')">
+                    <h3>FastBook</h3>
+                    <p>A sports facility booking system with user management and XML export.</p>
+                </div>
+                <div class="project-card" onclick="showModal('Portfolio')">
+                    <h3>Interactive Portfolio</h3>
+                    <p>A dynamic personal website showcasing my skills and projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="interactive">
+        <button class="btn" onclick="changeTheme()">Toggle Theme</button>
+        <button class="btn" onclick="downloadCV()">Download CV</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <script>
+        const themes = [
+            { bg: 'linear-gradient(135deg, #e0f7fa, #b2ebf2)', btn: '#26a69a', btnHover: '#4db6ac' },
+            { bg: 'linear-gradient(135deg, #fff3e0, #ffe0b2)', btn: '#ff8f00', btnHover: '#ffa726' },
+            { bg: 'linear-gradient(135deg, #f3e5f5, #e1bee7)', btn: '#ab47bc', btnHover: '#ba68c8' }
+        ];
+        let currentTheme = 0;
+
+        function changeTheme() {
+            currentTheme = (currentTheme + 1) % themes.length;
+            document.body.style.background = themes[currentTheme].bg;
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.style.background = themes[currentTheme].btn;
+                btn.onmouseover = () => btn.style.background = themes[currentTheme].btnHover;
+                btn.onmouseout = () => btn.style.background = themes[currentTheme].btn;
+            });
+        }
+
+        function showModal(project) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            modalTitle.textContent = project;
+            modalContent.textContent = getProjectDetails(project);
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function getProjectDetails(project) {
+            switch (project) {
+                case 'FastBook':
+                    return 'A Laravel-based sports facility booking system featuring user registration, login, profile management, and booking history with XML/XSLT export. Utilized Facade pattern and secure coding practices.';
+                case 'Portfolio':
+                    return 'This interactive portfolio showcases my skills in HTML, CSS, JavaScript, and PHP. Features include animated progress bars, modals, and theme switching for an engaging user experience.';
+                default:
+                    return '';
+            }
+        }
+
+        function downloadCV() {
+            const cvContent = `
+                Goh Kim Hua - Web Developer
+                Email: example@email.com | Phone: (123) 456-7890
+                ---
+                About Me
+                Passionate web developer with expertise in PHP, Laravel, JavaScript, and modern web technologies.
+                
+                Skills
+                - PHP & Laravel: 90%
+                - JavaScript: 85%
+                - HTML & CSS: 95%
+                - XML/XSLT/XPath: 80%
+                - MySQL: 85%
+                - Design Patterns: 90%
+                
+                Experience
+                - Web Developer Intern, Tech Solutions (2024)
+                - Freelance Developer (2023-2024)
+                
+                Education
+                - BSc in Computer Science, University of Tech (2021-2025)
+                
+                Projects
+                - FastBook: Laravel-based booking system
+                - Interactive Portfolio: Dynamic personal website
+            `;
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'kimhua_CV.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // Animate progress bars on load
+        window.onload = () => {
+            document.querySelectorAll('.progress').forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => bar.style.width = width, 100);
+            });
+        };
+    </script>
+</body>
+</html>
